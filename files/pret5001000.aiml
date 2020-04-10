@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	
+<category>
+	    <pattern>500 1000</pattern>
+	    <than> * Care este bugetul dumneavoastrÄ pentru achiziÈionarea unui smartphone?</than>
+	    <template>Ce brand aÈi vrea sÄ aibÄ smartphone-ul?
+        
+          <button>
+            <text>Samsung</text>
+            <postback>samsung</postback>
+        </button>
+        <button>
+            <text>Huawei</text>
+            <postback>huawei</postback>
+        </button>
+        <button>
+            <text>Xiaomi</text>
+            <postback>xiaomi</postback>
+        </button>
+        
+        
+        
+        <think><set name = "topic">500 1000</set></think>
+        <think> <set name="pret">500 1000</set></think>
+	    </template>
+	    
+    </category>
+    
+       <topic name = "500 1000">
+        
+        <category>
+            <pattern>samsung</pattern>
+            <template>Ce capacitate de memorie internÄ aÈi dori sÄ aibÄ? (Gb)
+  
+           
+             <button>
+                 <text>8</text>
+                 <postback>8</postback>
+             </button>
+             <button>
+                 <text>16</text>
+                 <postback>16</postback>
+             </button>
+             <button>
+                <text>32</text>
+                <postback>32</postback>
+            </button>
+            <button>
+                <text>64</text>
+                <postback>64</postback>
+            </button>
+                
+              <think><set name = "topic">samsung</set></think>
+              <think><set name="marca">samsung</set></think>
+            </template>
+        </category>
+        
+        
+        <!-- samsung -->
+        <topic name = "samsung">
+        
+        
+        <category>
+            <pattern>8</pattern>
+            <template>
+                Ce rezoluÈie aÈi dori sÄ aibÄ camera foto? (Mp)
+                
+                <button>
+                    <text>Sub 10</text>
+                    <postback>Sub 10 1</postback>
+                </button>
+            
+                <think><set name="memorieinterna">8 </set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Sub 10 1</pattern>
+            <template>VÄ recomand smartphone-ul: Samsung Galaxy J3 (2016)
+                 <button>
+                     <text>Sunt interesat de mai multe detalii.</text>
+                     <postback>Samsung Galaxy J3 (2016)</postback>
+                 </button>
+                 
+                 <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                </button>
+            <think><set name="smartphone">Samsung Galaxy J3 (2016)</set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Samsung Galaxy J3 (2016)</pattern>
+            <template>
+                
+                
+               
+                <carousel>
+                    <card>
+                        <image>https://s12emagst.akamaized.net/products/4327/4326928/images/res_9c28a0d0c192dbce769aae88f0b75476_450x450_ae7i.jpg</image>
+                        <title>Samsung Galaxy J2</title>
+                     
+                        <button>
+                            <text>Vezi Detalii</text>
+                            <url>https://www.emag.ro/telefon-mobil-samsung-galaxy-j3-2016-dual-sim-8gb-4g-gold-sm-j320fzgdrom/pd/D0JTL2BBM/</url>
+                        </button>
+                        
+                        <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                        </button>
+                        
+                    </card>
+                </carousel>
+                
+            </template>
+        </category>
+            
+
+        <!-- 16 -->
+        <category>
+            <pattern>16</pattern>
+            <template>
+                Ce rezoluÈie aÈi dori sÄ aibÄ camera foto? (Mp)
+                
+              
+                <button>
+                    <text>10-19</text>
+                    <postback>10 19 2</postback>
+                </button>
+
+
+            
+                <think><set name="memorieinterna">16 </set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>10 19 2</pattern>
+            <template>VÄ recomand smartphone-ul: Samsung Galaxy J5
+                 <button>
+                     <text>Sunt interesat de mai multe detalii.</text>
+                     <postback>Samsung Galaxy J5</postback>
+                 </button>
+                 
+                 <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                </button>
+            <think><set name="smartphone">Samsung Galaxy J5</set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Samsung Galaxy J5</pattern>
+            <template>
+                
+                
+               
+                <carousel>
+                    <card>
+                        <image>https://s12emagst.akamaized.net/products/3717/3716021/images/res_54403ad2f562e8bfd13c79e151881812_450x450_17lq.jpg</image>
+                        <title>Samsung Galaxy J5</title>
+                     
+                        <button>
+                            <text>Vezi Detalii</text>
+                            <url>https://www.emag.ro/telefon-mobil-samsung-galaxy-j5-2016-dual-sim-16gb-4g-black-sm-j510fzkuxeh/pd/D67JD2BBM/</url>
+                        </button>
+                        
+                        <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                        </button>
+                        
+                    </card>
+                </carousel>
+                
+            </template>
+        </category> 
+        
+        <!--32 -->
+        <category>
+            <pattern>32</pattern>
+            <template>
+                Ce rezoluÈie aÈi dori sÄ aibÄ camera foto? (Mp)
+                
+                <button>
+                    <text>Sub 10</text>
+                    <postback>Sub 10 3</postback>
+                </button>
+                <button>
+                    <text>10-19</text>
+                    <postback>10 19 4</postback>
+                </button>
+            
+                <think><set name="memorieinterna">32 </set></think>
+            </template>
+        </category>
+        
+        <!-- sub 10 -->
+        <category>
+            <pattern>Sub 10 3</pattern>
+            <template>VÄ recomand smartphone-ul: Samsung Galaxy J7 Duo
+                 <button>
+                     <text>Sunt interesat de mai multe detalii.</text>
+                     <postback>Samsung Galaxy J7 Duo</postback>
+                 </button>
+                 
+                 <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                </button>
+            <think><set name="smartphone">Samsung Galaxy J7 Duo</set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Samsung Galaxy J7 Duo</pattern>
+            <template>
+                
+            
+                <carousel>
+                    <card>
+                        <image>https://s12emagst.akamaized.net/products/15740/15739166/images/res_166e6f7937c01a6fc4bb8590a8209ebb_450x450_ldju.jpg</image>
+                        <title>Samsung Galaxy J7 Duo</title>
+                     
+                        <button>
+                            <text>Vezi Detalii</text>
+                            <url>https://www.emag.ro/telefon-mobil-samsung-galaxy-j7-duo-j720fd-dual-sim-32gb-3gb-ram-blue-j720fd/pd/DM8NMSBBM/</url>
+                        </button>
+                        
+                        <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                        </button>
+                        
+                    </card>
+                </carousel>
+                
+            </template>
+        </category>
+
+        <!-- 10-19 -->
+
+        <category>
+            <pattern>10 19 4</pattern>
+            <template>VÄ recomand smartphone-ul: Samsung Galaxy M10
+                 <button>
+                     <text>Sunt interesat de mai multe detalii.</text>
+                     <postback>Samsung Galaxy M10</postback>
+                 </button>
+                 
+                 <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                </button>
+            <think><set name="smartphone">Samsung Galaxy M10</set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Samsung Galaxy M10</pattern>
+            <template>
+                
+            
+                <carousel>
+                    <card>
+                        <image>https://s12emagst.akamaized.net/products/20437/20436604/images/res_a2db038c5d76a4267d8f302226c98806_450x450_1tep.jpg</image>
+                        <title>Samsung Galaxy M10</title>
+                     
+                        <button>
+                            <text>Vezi Detalii</text>
+                            <url>https://www.emag.ro/telefon-mobil-samsung-galaxy-m10-dual-sim-32gb-3gb-ram-4g-charcoal-black-sm-m105fd/pd/DNWW3ZBBM/</url>
+                        </button>
+                        
+                        <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                        </button>
+                        
+                    </card>
+                </carousel>
+                
+            </template>
+        </category>
+
+
+        </topic>
+        
+        <category>
+            <pattern>huawei</pattern>
+            <template>Ce capacitate de memorie internÄ aÈi dori sÄ aibÄ? (Gb)
+  
+           
+      
+             <button>
+                 <text>16</text>
+                 <postback>16</postback>
+             </button>
+
+             <button>
+                <text>32</text>
+                <postback>32</postback>
+            </button>
+            <button>
+                <text>64</text>
+                <postback>64</postback>
+            </button>
+                
+              <think><set name = "topic">huawei</set></think>
+              <think><set name="marca">huawei</set></think>
+            </template>
+        </category>
+        
+        
+        <!-- huawei -->
+        <topic name = "huawei">
+        
+        <!-- 16 -->
+        <category>
+            <pattern>16</pattern>
+            <template>
+                Ce rezoluÈie aÈi dori sÄ aibÄ camera foto? (Mp)
+                
+                <button>
+                    <text>10-19</text>
+                    <postback>10 19 5</postback>
+                </button>
+
+            
+                <think><set name="memorieinterna">16</set></think>
+            </template>
+        </category>
+        
+            
+        <category>
+            <pattern>10 19 5</pattern>
+            <template>VÄ recomand smartphone-ul: Huawei P9 Lite
+                 <button>
+                     <text>Sunt interesat de mai multe detalii.</text>
+                     <postback>Huawei P9 Lite</postback>
+                 </button>
+                 
+                 <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                </button>
+            <think><set name="smartphone">Huawei P9 Lite</set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Huawei P9 Lite</pattern>
+            <template>
+                
+                
+               
+                <carousel>
+                    <card>
+                        <image>https://s12emagst.akamaized.net/products/3542/3541629/images/res_42858b72817e38463790ac1d97edb01b_450x450_fc9h.jpg</image>
+                        <title>Huawei P9 Lite</title>
+                     
+                        <button>
+                            <text>Vezi Detalii</text>
+                            <url>https://www.emag.ro/telefon-mobil-huawei-p9-lite-dual-sim-16gb-4g-gold-p9-lite-gold/pd/D3H6R3BBM/</url>
+                        </button>
+                        
+                        <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                        </button>
+                        
+                    </card>
+                </carousel>
+                
+            </template>
+        </category>
+
+
+        <!--32 -->
+
+        <category>
+            <pattern>32</pattern>
+            <template>
+                Ce rezoluÈie aÈi dori sÄ aibÄ camera foto? (Mp)
+            
+                <button>
+                    <text>10-19</text>
+                    <postback>10 19 6</postback>
+                </button>
+
+            
+                <think><set name="memorieinterna">32</set></think>
+            </template>
+        </category>
+            
+        <category>
+            <pattern>10 19 6</pattern>
+            <template>VÄ recomand smartphone-ul: Huawei Y7 Prime 2018
+                 <button>
+                     <text>Sunt interesat de mai multe detalii.</text>
+                     <postback>Huawei Y7 Prime 2018</postback>
+                 </button>
+                 
+                 <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                </button>
+            <think><set name="smartphone">Huawei Y7 Prime 2018</set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Huawei Y7 Prime 2018</pattern>
+            <template>
+                
+                
+               
+                <carousel>
+                    <card>
+                        <image>https://s12emagst.akamaized.net/products/14967/14966732/images/res_2919eec02419031f96a10a815cf1e0db_450x450_6lkg.jpg</image>
+                        <title>Huawei Y7 Prime 2018</title>
+                     
+                        <button>
+                            <text>Vezi Detalii</text>
+                            <url>https://www.emag.ro/telefon-mobil-huawei-y7-prime-2018-dual-sim-32gb-4g-blue-y7-prime-2018-blue/pd/DR3PDJBBM/</url>
+                        </button>
+                        
+                        <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                        </button>
+                        
+                    </card>
+                </carousel>
+                
+            </template>
+        </category>
+
+        <!-- 64 -->
+
+        
+        <category>
+            <pattern>64</pattern>
+            <template>
+                Ce rezoluÈie aÈi dori sÄ aibÄ camera foto? (Mp)
+            
+                <button>
+                    <text>20-35</text>
+                    <postback>20 35 7</postback>
+                </button>
+
+            
+                <think><set name="memorieinterna">64</set></think>
+            </template>
+        </category>
+            
+        <category>
+            <pattern>20 35 7</pattern>
+            <template>VÄ recomand smartphone-ul: Huawei P Smart Z
+                 <button>
+                     <text>Sunt interesat de mai multe detalii.</text>
+                     <postback>Huawei P Smart Z</postback>
+                 </button>
+                 
+                 <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                </button>
+            <think><set name="smartphone">Huawei P Smart Z</set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Huawei P Smart Z</pattern>
+            <template>
+                
+                
+               
+                <carousel>
+                    <card>
+                        <image>https://s12emagst.akamaized.net/products/23457/23456091/images/res_09914f334cbea61e88c89c510cb12fed_450x450_5l5r.jpg</image>
+                        <title>Huawei P Smart Z</title>
+                     
+                        <button>
+                            <text>Vezi Detalii</text>
+                            <url>https://www.emag.ro/telefon-mobil-huawei-p-smart-z-dual-sim-64gb-4g-midnight-black-51093yla/pd/D3BHPRBBM/?ref=resealed_products_widget#used-products</url>
+                        </button>
+                        
+                        <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                        </button>
+                        
+                    </card>
+                </carousel>
+                
+            </template>
+        </category>
+
+        </topic>
+        
+        <!-- xiaomi-->
+
+        <category>
+            <pattern>xiaomi</pattern>
+            <template>Ce capacitate de memorie internÄ aÈi dori sÄ aibÄ? (Gb)
+  
+             <button>
+                 <text>16</text>
+                 <postback>16</postback>
+             </button>
+             <button>
+                <text>32</text>
+                <postback>32</postback>
+            </button>
+            <button>
+                <text>64</text>
+                <postback>64</postback>
+            </button>
+            <button>
+                <text>128</text>
+                <postback>128</postback>
+            </button>
+                
+              <think><set name = "topic">xiaomi</set></think>
+              <think><set name="marca">xiaomi</set></think>
+            </template>
+        </category>
+        
+        
+
+        <topic name = "xiaomi">
+        
+        
+        <category>
+            <pattern>16</pattern>
+            <template>
+                Ce rezoluÈie aÈi dori sÄ aibÄ camera foto? (Mp)
+                
+                <button>
+                    <text>Sub 10</text>
+                    <postback>Sub 10 8</postback>
+                </button>
+                <button>
+                    <text>10-19</text>
+                    <postback>10 19 9</postback>
+                </button>
+
+            
+                <think><set name="memorieinterna">16 </set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Sub 10 8</pattern>
+            <template>VÄ recomand smartphone-ul:  Xiaomi Redmi GO2
+                 <button>
+                     <text>Sunt interesat de mai multe detalii.</text>
+                     <postback>Xiaomi Redmi GO2</postback>
+                 </button>
+                 
+                 <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                </button>
+            <think><set name="smartphone">Xiaomi Redmi GO2</set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Xiaomi Redmi GO2</pattern>
+            <template>
+                
+                
+               
+                <carousel>
+                    <card>
+                        <image>https://s12emagst.akamaized.net/products/22322/22321705/images/res_bd3f644591826c073b21ecfca04d209e_450x450_7t3q.jpg</image>
+                        <title>Xiaomi Redmi GO2</title>
+                     
+                        <button>
+                            <text>Vezi Detalii</text>
+                            <url>https://www.emag.ro/telefon-mobil-xiaomi-redmi-go-dual-sim-16gb-1gb-ram-albastru-10443-1003-117329-12534-hu03/pd/DB6N9QBBM/</url>
+                        </button>
+                        
+                        <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                        </button>
+                        
+                    </card>
+                </carousel>
+                
+            </template>
+        </category>
+            
+        
+        <category>
+            <pattern>10 19 9</pattern>
+            <template>VÄ recomand smartphone-ul: Xiaomi Redmi 6A
+                 <button>
+                     <text>Sunt interesat de mai multe detalii.</text>
+                     <postback>Xiaomi Redmi 6A</postback>
+                 </button>
+                 
+                 <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                </button>
+            <think><set name="smartphone">Xiaomi Redmi 6A</set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Xiaomi Redmi 6A</pattern>
+            <template>
+                
+                
+               
+                <carousel>
+                    <card>
+                        <image>https://s12emagst.akamaized.net/products/18023/18022352/images/res_e2f9bcbab3445687da1f2ecc9d9c37c4_450x450_dmfa.jpg</image>
+                        <title>Xiaomi Redmi 6A</title>
+                     
+                        <button>
+                            <text>Vezi Detalii</text>
+                            <url>https://www.emag.ro/telefon-mobil-xiaomi-redmi-dual-sim-16gb-2gb-gold-6a/pd/DD1GF4BBM/</url>
+                        </button>
+                        
+                        <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                        </button>
+                        
+                    </card>
+                </carousel>
+                
+            </template>
+        </category>                 
+
+        <!-- 32 -->
+
+        <category>
+            <pattern>32</pattern>
+            <template>
+                Ce rezoluÈie aÈi dori sÄ aibÄ camera foto? (Mp)
+                
+                <button>
+                    <text>10-19</text>
+                    <postback>10 19 10</postback>
+                </button>
+
+            
+                <think><set name="memorieinterna">32 </set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>10 19 10</pattern>
+            <template>VÄ recomand smartphone-ul: Xiaomi Redmi 4X
+                 <button>
+                     <text>Sunt interesat de mai multe detalii.</text>
+                     <postback>Xiaomi Redmi 4X</postback>
+                 </button>
+                 
+                 <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                </button>
+            <think><set name="smartphone">Xiaomi Redmi 4X</set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Xiaomi Redmi 4X</pattern>
+            <template>
+                
+                
+               
+                <carousel>
+                    <card>
+                        <image>https://s12emagst.akamaized.net/products/6056/6055917/images/res_fd68b2295b41b2471b29b7ceb998f7fe_450x450_i2ea.jpg</image>
+                        <title>Xiaomi Redmi 4X</title>
+                     
+                        <button>
+                            <text>Vezi Detalii</text>
+                            <url>https://www.emag.ro/telefon-mobil-xiaomi-redmi-4x-dual-sim-32gb-4g-black-xmrm4x332b/pd/D7LKSDBBM/</url>
+                        </button>
+                        
+                        <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                        </button>
+                        
+                    </card>
+                </carousel>
+                
+            </template>
+        </category>                 
+
+        <!-- 64 -->
+
+        <category>
+            <pattern>64</pattern>
+            <template>
+                Ce rezoluÈie aÈi dori sÄ aibÄ camera foto? (Mp)
+                
+                <button>
+                    <text>20-35</text>
+                    <postback>20 35 11</postback>
+                </button>
+
+            
+                <think><set name="memorieinterna">64 </set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>20 35 11</pattern>
+            <template>VÄ recomand smartphone-ul: Xiaomi Mi A1
+                 <button>
+                     <text>Sunt interesat de mai multe detalii.</text>
+                     <postback>Xiaomi Mi A1</postback>
+                 </button>
+                 
+                 <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                </button>
+            <think><set name="smartphone">Xiaomi Mi A1</set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Xiaomi Mi A1</pattern>
+            <template>
+                
+                
+               
+                <carousel>
+                    <card>
+                        <image>https://s12emagst.akamaized.net/products/9021/9020316/images/res_efff40d43024f7c086cd31e413c0529a_450x450_cji2.jpg</image>
+                        <title>Xiaomi Mi A1</title>
+                     
+                        <button>
+                            <text>Vezi Detalii</text>
+                            <url>https://www.emag.ro/telefon-mobil-xiaomi-mi-a1-dual-sim-64gb-4g-gold-mi-a1-gold/pd/DGHQ1NBBM/</url>
+                        </button>
+                        
+                        <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                        </button>
+                        
+                    </card>
+                </carousel>
+                
+            </template>
+        </category>                 
+
+         <!-- 128 -->
+
+         <category>
+            <pattern>128</pattern>
+            <template>
+                Ce rezoluÈie aÈi dori sÄ aibÄ camera foto? (Mp)
+            
+                <button>
+                    <text>10-19</text>
+                    <postback>10 19 12</postback>
+                </button>
+
+            
+                <think><set name="memorieinterna">128 </set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>10 19 12</pattern>
+            <template>VÄ recomand smartphone-ul: Xiaomi Redmi Note 7
+                 <button>
+                     <text>Sunt interesat de mai multe detalii.</text>
+                     <postback>Xiaomi Redmi Note 7</postback>
+                 </button>
+                 
+                 <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                </button>
+            <think><set name="smartphone">Xiaomi Redmi Note 7</set></think>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Xiaomi Redmi Note 7</pattern>
+            <template>
+                
+                
+               
+                <carousel>
+                    <card>
+                        <image>https://s12emagst.akamaized.net/products/22458/22457044/images/res_901aeedb0caf92a9c2ffe7ab1d70042a_450x450_cnhc.jpg</image>
+                        <title>Xiaomi Redmi Note 7</title>
+                     
+                        <button>
+                            <text>Vezi Detalii</text>
+                            <url>https://www.emag.ro/telefon-mobil-xiaomi-redmi-note-7-dual-sim-128gb-4g-black-22884xiaomi/pd/DQPRNQBBM/</url>
+                        </button>
+                        
+                        <button>
+                            <text>Doresc sÄ Ã®mi recomandaÈi alt smartphone</text>
+                            <postback>recomandare</postback>
+                        </button>
+                        
+                    </card>
+                </carousel>
+                
+            </template>
+        </category>                 
+
+
+
+        </topic>
+
+      
+        </topic>
+        
+	
+</aiml>

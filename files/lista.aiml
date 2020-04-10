@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	
+
+
+
+	<category>
+	    <pattern>recomandare</pattern>
+	    <template>PreferaÈi sÄ vÄ recomand un nou smartphone?
+
+        <button>
+        <text>Doresc sÄ Ã®mi recomandaÈi un smartphone</text>
+            <postback>da</postback>
+        </button>
+	       
+	    </template>
+    </category>
+    
+    
+        
+     
+        
+
+
+
+
+	
+</aiml>

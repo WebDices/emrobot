@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<aiml version="2.0">
+    <!-- insert your AIML categories here -->
+
+    <category>
+        <pattern>*</pattern>
+        <template>Nu am un rÄspuns la aceast lucru.</template>
+    </category>
+
+    <category>
+        <pattern>Salutare</pattern>
+        <template>Salut! Care este numele dumneavoastrÄ?</template>
+    </category>
+
+    <category>
+        <pattern>Salut</pattern>
+        <template>Salut! Care este numele dumneavoastrÄ?</template>
+    </category>
+
+    <category>
+        <pattern>Buna ziua</pattern>
+        <template>Salut! Care este numele dumneavoastrÄ?</template>
+    </category>
+
+    <category>
+        <pattern>Buna</pattern>
+        <template>Salut! Care este numele dumneavoastrÄ?</template>
+    </category>
+
+    <category>
+        <pattern>Hei</pattern>
+        <template>Salut! Care este numele dumneavoastrÄ?</template>
+    </category>
+
+    <category>
+	    <pattern>Ma numesc * </pattern>
+	    <template>ÃncÃ¢ntat de cunoÈtinÈÄ <set name="nume"><star /></set>. AÈi dori sÄ Ã®ncepem sÄ gÄsim un smartphone potrivit pentru dumneavoastrÄ?</template>
+    </category>
+
+    <category>
+	    <pattern>Numele meu este * </pattern>
+	    <template>ÃncÃ¢ntat de cunoÈtinÈÄ <set name="nume"><star /></set>. AÈi dori sÄ Ã®ncepem sÄ gÄsim un smartphone potrivit pentru dumneavoastrÄ?</template>
+    </category>
+
+    <category>
+	    <pattern>Sunt  * </pattern>
+	    <template>ÃncÃ¢ntat de cunoÈtinÈÄ <set name="nume"><star /></set>. AÈi dori sÄ Ã®ncepem sÄ gÄsim un smartphone potrivit pentru dumneavoastrÄ?</template>
+    </category>
+
+    <category>
+        <pattern>Cine sunt </pattern>
+        <template>
+            <think><set var="verificanume"><get name="nume" /></set></think> 
+            <condition var="verificanume">
+                <li value="unknown">IncÄ nu te-ai prezentat!</li>
+                <li>Numele dumneavoastrÄ este <get var="verificanume" />.</li>
+           </condition>
+        </template>
+    </category>
+    
+       <category>
+        <pattern>Care este numele meu </pattern>
+        <template>
+            <think><set var="verificanume"><get name="nume" /></set></think> 
+            <condition var="verificanume">
+                <li value="unknown">IncÄ nu te-ai prezentat!</li>
+                <li>Numele dumneavoastrÄ este <get var="verificanume" />.</li>
+           </condition>
+        </template>
+    </category>
+
+
+    
+         <category>
+        <pattern>^ numesti ^</pattern>
+        <template>
+		Numele meu este <bot name="name" />, sunt programat pentru a vÄ ajuta sÄ gÄsiÈi un smartphone care sa corespundÄ cu necesitÄÈile dumneavoastrÄ.
+		<br/> AÈi dori sÄ Ã®ncepem?
+		</template>
+    </category>
+    
+         <category>
+        <pattern>^ numele ^</pattern>
+        <template>
+		Numele meu este <bot name="name" />, sunt programat pentru a vÄ ajuta sÄ gÄsiÈi un smartphone care sa corespundÄ cu necesitÄÈile dumneavoastrÄ.
+		<br/> AÈi dori sÄ Ã®ncepem?
+		</template>
+    </category>
+    
+         <category>
+        <pattern>^ nume ^</pattern>
+        <template>
+		Numele meu este <bot name="name" />, sunt programat pentru a vÄ ajuta sÄ gÄsiÈi un smartphone care sa corespundÄ cu necesitÄÈile dumneavoastrÄ.
+		<br/> AÈi dori sÄ Ã®ncepem?
+		</template>
+    </category>
+    
+      <category>
+            <pattern>nu</pattern>
+            <template>Ãmi pare rÄu ca nu vÄ pot ajuta, vÄ doresc o zi frumoasÄ Ã®n continuare!</template>
+        </category>
+        
+      <category>
+            <pattern>da</pattern>
+            <template>
+            Care este bugetul dumneavoastrÄ pentru achiziÈionarea unui smartphone?
+
+            <button>
+                <text>100-500</text>
+                <postback>100 500</postback>
+            </button>
+            <button>
+                <text>500-1000</text>
+                <postback>500 1000</postback>
+            </button>
+            
+              <button>
+                <text>1000-1500</text>
+                <postback>1000 1500</postback>
+            </button>
+            
+            <button>
+                <text>1500-3000</text>
+                <postback>1500 3000</postback>
+            </button>
+       
+          <button>
+                <text>3000+</text>
+                <postback>3001</postback>
+            </button>
+            
+            </template>
+        </category>
+        
+        
+        
+</aiml>

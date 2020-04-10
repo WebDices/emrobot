@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+         <category>
+        <pattern>^ pret ^</pattern>
+        <template>
+            <think><set var="valoare"><get name="pret" /></set></think> 
+            <condition var="valoare">
+                <li value="unknown">Nu mi-ati spus ce preÈ doriÈi sÄ aibÄ.</li>
+            </condition>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>^ brand ^</pattern>
+        <template>
+            <think><set var="valoare"><get name="brand" /></set></think> 
+            <condition var="valoare">
+                <li value="unknown">Nu mi-ati spus ce brand doriÈi sÄ aibÄ.</li>
+    
+            </condition>
+        </template>
+    </category>
+    
+    
+        <category>
+        <pattern>^ memorie ^</pattern>
+        <template>
+            <think><set var="valoare"><get name="memorie" /></set></think> 
+            <condition var="valoare">
+                <li value="unknown">Nu mi-ati spus ce memorie internÄ doriÈi sÄ aibÄ.</li>
+
+            </condition>
+        </template>
+    </category>
+
+    
+    
+    
+    
+</aiml>
